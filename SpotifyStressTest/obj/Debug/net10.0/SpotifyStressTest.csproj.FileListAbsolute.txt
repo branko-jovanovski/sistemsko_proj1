@@ -1,0 +1,14 @@
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\bin\Debug\net10.0\SpotifyStressTest.exe
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\bin\Debug\net10.0\SpotifyStressTest.deps.json
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\bin\Debug\net10.0\SpotifyStressTest.runtimeconfig.json
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\bin\Debug\net10.0\SpotifyStressTest.dll
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\bin\Debug\net10.0\SpotifyStressTest.pdb
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.AssemblyInfoInputs.cache
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.AssemblyInfo.cs
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.csproj.CoreCompileInputs.cache
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.dll
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\refint\SpotifyStressTest.dll
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.pdb
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\SpotifyStressTest.genruntimeconfig.cache
+C:\Users\brank\OneDrive\Desktop\STRESSTEST\SpotifyStressTest\obj\Debug\net10.0\ref\SpotifyStressTest.dll
