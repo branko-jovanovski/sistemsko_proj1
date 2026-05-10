@@ -1,14 +1,14 @@
 # Spotify Search API
 
 ## Opis projekta
-Ovaj projekat predstavlja serversku aplikaciju realizovanu kao konzolni program u jeziku **C#**. Sistem funkcioniše kao prilagođeni Web server (korišćenjem `HttpListener` klase) koji klijentima omogućava pretragu pesama i albuma integracijom sa **Spotify Web API-jem**.
+Ovaj projekat predstavlja serversku aplikaciju realizovanu kao konzolni program u jeziku C#. Sistem funkcioniše kao prilagođeni Web server (korišćenjem `HttpListener` klase) koji klijentima omogućava pretragu pesama i albuma integracijom sa Spotify Web API-jem.
 
 Glavni fokus projekta je na konkurentnom programiranju, pravilnoj sinhronizaciji niti i upravljanju deljenim resursima u uslovima visokog opterećenja.
 
 ---
 
 ## Arhitektura sistema
-Sistem je dizajniran na osnovu **Producer-Consumer** (Proizvođač-Potrošač) principa, čime je postignuto striktno razdvajanje prijema i obrade zahteva:
+Sistem je dizajniran na osnovu Producer-Consumer (Proizvođač-Potrošač) principa, čime je postignuto striktno razdvajanje prijema i obrade zahteva:
 
 *   **Nit za prijem (Slušač):** Glavna nit prihvata dolazne HTTP zahteve i smešta ih u deljenu `Queue` strukturu (red) ograničenog kapaciteta.
 *   **Radne niti (Worker Threads):** Skup paralelnih niti kontinuirano preuzima zahteve iz reda i obrađuje ih.
@@ -17,7 +17,7 @@ Sistem je dizajniran na osnovu **Producer-Consumer** (Proizvođač-Potrošač) p
 ---
 
 ## Upravljanje memorijom (TTL Keš)
-Implementirana je strategija **aktivnog čišćenja**. Pozadinska nit `Nit-CistacKesa` se budi periodično (svakih 20s) i uklanja elemente kojima je isteklo vreme trajanja. Ovo osigurava da memorija servera ostane optimizovana čak i pri dugotrajnom radu.
+Implementirana je strategija aktivnog čišćenja. Pozadinska nit `Nit-CistacKesa` se budi periodično (svakih 20s) i uklanja elemente kojima je isteklo vreme trajanja. Ovo osigurava da memorija servera ostane optimizovana čak i pri dugotrajnom radu.
 
 ---
 
@@ -53,7 +53,7 @@ http://localhost:8080/search?q=Taylor+Swift&type=track&limit=5
 
 ## Stres testiranje i validacija sistema
 
-Za potrebe verifikacije stabilnosti i performansi servera, razvijen je namenski **Stress Tester** (konzolna aplikacija). Ovaj alat simulira ekstremne uslove rada kako bi se potvrdila ispravnost mehanizama sinhronizacije.
+Za potrebe verifikacije stabilnosti i performansi servera, razvijen je namenski Stress Tester (konzolna aplikacija). Ovaj alat simulira ekstremne uslove rada kako bi se potvrdila ispravnost mehanizama sinhronizacije.
 
 ### Metodologija testiranja
 Tester koristi napredne tehnike konkurentnosti u C#-u:
