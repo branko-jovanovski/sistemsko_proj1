@@ -1,7 +1,7 @@
 # Spotify Search API
 
 ## Opis projekta
-Ovaj projekat predstavlja serversku aplikaciju realizovanu kao konzolni program u jeziku C#. Sistem funkcioniše kao prilagođeni Web server (korišćenjem `HttpListener` klase) koji klijentima omogućava pretragu pesama i albuma integracijom sa Spotify Web API-jem.
+Ovaj projekat predstavlja serversku aplikaciju realizovanu kao konzolni program u jeziku C#. Sistem funkcioniše kao prilagođeni Web server koji klijentima omogućava pretragu pesama i albuma integracijom sa Spotify Web API-jem.
 
 Glavni fokus projekta je na konkurentnom programiranju, pravilnoj sinhronizaciji niti i upravljanju deljenim resursima u uslovima visokog opterećenja.
 
@@ -17,7 +17,7 @@ Sistem je dizajniran na osnovu Producer-Consumer (Proizvođač-Potrošač) princ
 ---
 
 ## Upravljanje memorijom (TTL Keš)
-Implementirana je strategija aktivnog čišćenja. Pozadinska nit `Nit-CistacKesa` se budi periodično (svakih 20s) i uklanja elemente kojima je isteklo vreme trajanja. Ovo osigurava da memorija servera ostane optimizovana čak i pri dugotrajnom radu.
+Implementirana je strategija aktivnog čišćenja. Pozadinska nit `Nit-CistacKesa` se budi periodično i uklanja elemente kojima je isteklo vreme trajanja. Ovo osigurava da memorija servera ostane optimizovana čak i pri dugotrajnom radu.
 
 ---
 
@@ -57,9 +57,9 @@ Za potrebe verifikacije stabilnosti i performansi servera, razvijen je namenski 
 
 ### Metodologija testiranja
 Tester koristi napredne tehnike konkurentnosti u C#-u:
-*   **SemaphoreSlim:** Kontroliše maksimalni broj istovremenih konekcija ka serveru (istovremeno leti 50 ili 100 zahteva).
-*   **Interlocked.Increment:** Obezbeđuje atomsko i thread-safe brojanje uspešnih i neuspešnih odgovora.
-*   **Task.WhenAll:** Omogućava asinhrono čekanje na završetak svih generisanih zadataka.
+*   **SemaphoreSlim:** Kontroliše maksimalni broj istovremenih konekcija ka serveru.
+*   **Interlocked.Increment:** Obezbeđuje thread-safe brojanje uspešnih i neuspešnih odgovora.
+*   **Task.WhenAll:** Omogućava čekanje na završetak svih generisanih zadataka.
 
 ### Kako pokrenuti test:
 1.  Pokrenite glavni server (`SpotifyApiServer`).
@@ -71,4 +71,4 @@ Tester koristi napredne tehnike konkurentnosti u C#-u:
 ### Tumačenje rezultata
 *   **Zeleni ispis:** Test je prošao bez ijedne greške (Status 200 OK za sve zahteve).
 *   **Crveni ispis:** Došlo je do grešaka u komunikaciji (npr. server je odbio konekciju ili je Spotify API vratio grešku zbog prevelikog broja zahteva u kratkom periodu).
-*   **Vreme (ms):** Ukupno vreme potrebno da server obradi svih 1000 zahteva.
+*   **Vreme (ms):** Ukupno vreme potrebno da server obradi sve zahteve.
